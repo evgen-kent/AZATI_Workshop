@@ -26,7 +26,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Always never give up !!!
+        Always never give up test test !!!
       </p>
     </>
   )
