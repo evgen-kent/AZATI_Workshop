@@ -8,5 +8,5 @@ export default defineConfig({
     port: 5173,
     host: '127.0.0.1',
   },
-  base: '/AZATI_Workshop_BE/',
+  base: '/AZATI_Workshop/',
 });

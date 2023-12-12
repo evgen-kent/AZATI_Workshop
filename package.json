@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://evgen-kent.github.io/AZATI_Workshop_BE/",
+  "homepage": "https://evgen-kent.github.io/AZATI_Workshop/",
   "scripts": {
     "deploy":"npm run build && gh pages -d",
     "dev": "vite",
