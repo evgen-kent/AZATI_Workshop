@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'IntegralCF-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./src/assets/fonts/IntegralCF/IntegralCF-Bold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('./src/assets/fonts/Satoshi/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('./src/assets/fonts/Satoshi/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
