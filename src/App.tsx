@@ -1,33 +1,12 @@
-import { useSelector, useDispatch } from 'react-redux';
-import './App.css';
-import { RootState } from './store/store';
-import { decrement, increment } from './store/counterSlice';
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
 
-function App() {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
-
-
-  return (
-    <div>
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
-    </div>
-  );
-}
-
+const App = (): JSX.Element => {
+    return (
+        <>
+        <RouterProvider router={router} />
+        </>
+    );
+};
 
 export default App;
