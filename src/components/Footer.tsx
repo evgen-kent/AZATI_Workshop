@@ -30,6 +30,7 @@ const Footer = () => {
             width="355px"
           />
           <Button
+            className={style.button_subscribe}
             sx={{
               fontSize: '16px',
               borderRadius: '50px',

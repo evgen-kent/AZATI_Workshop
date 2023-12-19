@@ -111,3 +111,16 @@
     line-height: 45px; /* 112.5% */
   }
 }
+.button_subscribe {
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  text-transform: none;
+  font-family: 'Satoshi-Medium';
+  padding: 20px 90px;
+  &:hover {
+    background-color: #fff !important;
+  }
+}
