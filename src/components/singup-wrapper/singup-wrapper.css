@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Integral CF-Bold";
+  src: url("/src/assets/fonts/IntegralCF/IntegralCF-Bold.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("/src/assets/fonts/Satoshi/Satoshi-Medium.woff2") format("woff2");
+  font-style: normal;
+}
+
+.sign-wrapper {
+  height: 433px;
+  position: relative;
+  width: 326px;
+}
+
+.sign-wrapper .label {
+  color: #000000;
+  font-family: "Integral CF-Bold", Helvetica;
+  font-size: 48px;
+  font-weight: 700;
+  height: 63px;
+  left: 58px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+}
+
+.sign-wrapper .footer {
+  color: transparent;
+  font-family: "Satoshi-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: 22px;
+  position: absolute;
+  top: 410px;
+  white-space: nowrap;
+  margin: 0;
+}
