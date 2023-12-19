@@ -1,0 +1,23 @@
+.card {
+  max-width: 345px;
+  max-height: 420px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.img {
+  height: 280px;
+  object-fit: contain;
+  background-color: #ddd9db;
+  border-radius: 25px;
+}
+.card_content {
+  font-family: 'Satoshi-Bold';
+  color: #000;
+  font-style: normal;
+  line-height: normal;
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
