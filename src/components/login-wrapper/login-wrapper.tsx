@@ -1,7 +1,7 @@
 import SubmitButton from "../button-auth/button-auth";
-import Input from "../input-auth/input-aurh";
+import Input from "../input-auth/input-auth";
 import "./login-wrapper.css";
-import mailIcon from "../../assets/mui-mail.svg";
+import mailIcon from "../../assets/mui-email.svg";
 import passIcon from "../../assets/mui-lock.svg";
 import { Checkbox } from "@mui/material";
 
