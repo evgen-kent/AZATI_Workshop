@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("/src/assets/fonts/Satoshi/Satoshi-Medium.woff2") format("woff2");
+  font-style: normal;
+}
+
+.submit-button {
+  background-color: #000000;
+  border-radius: 62px;
+  height: 48px;
+  overflow: hidden;
+  position: absolute;
+  width: 326px;
+}
+
+.submit-button .text-wrapper {
+  color: #ffffff;
+  font-family: "Satoshi-Medium", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  left: 144px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 14px;
+}
+
+.login {
+  top: 281px;
+}
+
+.reg {
+  top: 355px;
+}
