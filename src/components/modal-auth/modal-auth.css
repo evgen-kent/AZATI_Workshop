@@ -1,0 +1,17 @@
+.modal {
+  background-color: #efefef;
+  border-radius: 40px;
+  overflow: hidden;
+  width: 468px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-sm {
+  height: 492px;
+}
+
+.modal-lg {
+  height: 575px;
+}
