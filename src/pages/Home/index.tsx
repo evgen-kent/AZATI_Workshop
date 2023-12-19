@@ -4,7 +4,7 @@ import { RootState } from '../../store/store';
 import Layout from '../../layouts/Layout';
 import style from '../../styles/App.module.scss';
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
   return (

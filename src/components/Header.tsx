@@ -6,7 +6,7 @@ import InputBar from './InputBar';
 
 const pages = ['Shop', 'On Sale', 'New Arrivals', 'Brands'];
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <div>
       <AppBar
@@ -62,7 +62,7 @@ const Header = () => {
                 backgroundColor="#DDD9DB"
                 Icon={IoSearch}
                 placeholder="Search"
-                width='575px'
+                width="575px"
               />
             </Box>
             <Box sx={{ flexGrow: 0 }}>

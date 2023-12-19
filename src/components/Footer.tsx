@@ -9,7 +9,7 @@ import InputBar from './InputBar.tsx';
 import { TfiEmail } from 'react-icons/tfi';
 import { Button } from '@mui/material';
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   const id = useId();
   return (
     <div className={style.footer}>
