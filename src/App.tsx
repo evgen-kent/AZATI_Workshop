@@ -1,6 +1,7 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./routes";
 
+
 const App = (): JSX.Element => {
   return (
     <>
@@ -10,3 +11,4 @@ const App = (): JSX.Element => {
 };
 
 export default App;
+
