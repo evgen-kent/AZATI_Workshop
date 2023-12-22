@@ -3,6 +3,7 @@ import { decrement, increment } from '../../store/counterSlice';
 import { RootState } from '../../store/store';
 import Layout from '../../layouts/Layout';
 import style from '../../styles/App.module.scss';
+import Article from '../../components/article/Article';
 
 const Home = () => {
   const count = useSelector((state: RootState) => state.counter.value);
@@ -24,6 +25,7 @@ const Home = () => {
           Decrement
         </button>
       </div>
+      <Article/>
     </Layout>
   );
 };
