@@ -1,28 +1,33 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from '../../store/counterSlice';
-import { RootState } from '../../store/store';
 import Layout from '../../layouts/Layout';
 import style from '../../styles/App.module.scss';
+import ProductCard from '../../components/ProductCard';
+import { productCard } from '../../constants/ProductCard';
+import { useId } from 'react';
 
-const Home = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
+const Home = (): JSX.Element => {
+  const id = useId();
   return (
     <Layout title="SHOP.CO">
       <div className={style.main}>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+        {/* для примера карточки сделан div с белым фоном  */}
+        <div
+          style={{
+            backgroundColor: 'white',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            padding: '100px 0px',
+          }}
         >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
+          {productCard.map((product) => (
+            <ProductCard
+              key={id}
+              title={product.title}
+              price={product.price}
+              img={product.img}
+            />
+          ))}
+        </div>
       </div>
     </Layout>
   );

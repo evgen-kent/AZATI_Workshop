@@ -50,7 +50,7 @@ const InputBar = ({
   placeholder,
   backgroundColor,
   width,
-}: SearchProps) => {
+}: SearchProps): JSX.Element => {
   return (
     <>
       <Search
