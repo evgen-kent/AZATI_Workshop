@@ -74,6 +74,9 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							SecondIcon={IoEyeSharp}
 							ThirdIcon={IoEyeOff}
 						/>
+						<button className={style.button} onClick={handleClear}>
+							Sign Up
+						</button>
 						<div style={{ cursor: 'pointer' }} onClick={toggleInputType}>
 							Already have an account? Log in
 						</div>
@@ -100,6 +103,9 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							ThirdIcon={IoEyeOff}
 							type='password'
 						/>
+						<button className={style.button} onClick={handleClear}>
+							Log In
+						</button>
 						<div style={{ cursor: 'pointer' }} onClick={toggleInputType}>
 							Don’t have an account? Sign up
 						</div>
