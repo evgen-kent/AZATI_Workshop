@@ -1,23 +1,27 @@
 .card {
-  max-width: 345px;
-  max-height: 420px;
-  background-color: transparent;
-  box-shadow: none !important;
+	max-width: 345px;
+	max-height: 420px;
+	background-color: transparent;
+	box-shadow: none !important;
+	padding-bottom: 20px;
 }
 .img {
-  height: 280px;
-  object-fit: contain;
-  background-color: #ddd9db;
-  border-radius: 25px;
+	height: 280px;
+	object-fit: contain;
+	background-color: #ddd9db;
+	border-radius: 25px;
 }
 .card_content {
-  font-family: 'Satoshi-Bold';
-  color: #000;
-  font-style: normal;
-  line-height: normal;
-  h4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
+	font-family: 'Satoshi-Bold';
+	color: #000;
+	font-style: normal;
+	line-height: normal;
+	h3 {
+		margin-bottom: 10px;
+	}
+	h4 {
+		font-size: 24px;
+		font-weight: bold;
+		margin-top: 5px;
+	}
 }
