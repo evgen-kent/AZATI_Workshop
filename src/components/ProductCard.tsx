@@ -18,7 +18,6 @@ const ProductCard = ({ img, title, price }: productCardProps): JSX.Element => {
 					image={img}
 					alt='green iguana'
 				/>
-				{/* здесь должен быть компонент рейтинга */}
 				<CardContent className={style.card_content}>
 					<h3>{title}</h3>
 					<RatingBar name='read' />
