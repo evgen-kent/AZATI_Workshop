@@ -3,9 +3,9 @@ import {
 	footerCredits,
 	footerList,
 	footerSocials
-} from '../../constants/Footer.ts'
-import style from './Footer.module.scss'
-import InputBar from '../InputBar.tsx'
+} from '../constants/Footer.ts'
+import style from '../styles/Footer.module.scss'
+import InputBar from './InputBar.tsx'
 import { TfiEmail } from 'react-icons/tfi'
 import { Button } from '@mui/material'
 
@@ -24,6 +24,8 @@ const Footer = (): JSX.Element => {
 					}}
 				>
 					<InputBar
+						mrLeft='0px'
+						type='input'
 						Icon={TfiEmail}
 						placeholder='Enter your email address'
 						backgroundColor='#ffffff'
