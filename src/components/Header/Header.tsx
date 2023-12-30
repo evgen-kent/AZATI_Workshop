@@ -2,9 +2,9 @@ import { AppBar, Box, Button, Container, Toolbar } from '@mui/material'
 import { FaRegCircleUser } from 'react-icons/fa6'
 import { FiShoppingCart } from 'react-icons/fi'
 import { IoSearch } from 'react-icons/io5'
-import InputBar from './InputBar'
+import InputBar from '../InputBar/InputBar'
 import { useState } from 'react'
-import ModalForm from './ModalForm'
+import ModalForm from '../ModalForm/ModalForm'
 
 const pages = ['Shop', 'On Sale', 'New Arrivals', 'Brands']
 
