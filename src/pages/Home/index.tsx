@@ -1,33 +1,39 @@
 import Layout from '../../layouts/Layout'
 import style from '../../styles/App.module.scss'
 import ProductCard from '../../components/ProductCard'
-import { productCard } from '../../constants/ProductCard'
-import { useId } from 'react'
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { getProductAction } from '../../store/productSlice'
+import { AppDispatch } from '../../store/store'
+import { product } from '../../types/productCardType'
 
 const Home = (): JSX.Element => {
-	const id = useId()
+	const dispatch = useDispatch<AppDispatch>()
+	const [products, setProducts] = useState([])
+	useEffect(() => {
+		dispatch(getProductAction())
+			.then(response => {
+				setProducts(response.payload.data)
+			})
+			.catch(error => {
+				console.error('Error fetching types:', error)
+				setProducts([])
+			})
+	}, [])
 	return (
 		<Layout title='SHOP.CO'>
 			<div className={style.main}>
 				{/* для примера карточки сделан div с белым фоном  */}
-				<div
-					style={{
-						backgroundColor: 'white',
-						width: '100%',
-						display: 'flex',
-						justifyContent: 'space-evenly',
-						padding: '100px 0px'
-					}}
-				>
-					{productCard.map(product => (
+				<div className={style.products_row}>
+					{products.map((product: product) => (
 						<ProductCard
-							key={id}
-							title={product.title}
-							price={product.price}
-							img={product.img}
+							key={product.id}
+							name={product.name}
+							image={product.image}
 						/>
 					))}
 				</div>
+				
 			</div>
 		</Layout>
 	)
