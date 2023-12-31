@@ -30,8 +30,8 @@ const theme = createTheme({
   },
   typography: {
     allVariants: {
-      fontFamily: ['Archivo Black', 'sans-serif'].join(','),
-      letterSpacing: '-4%',
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      textTransform: 'none',
     },
     h1: {
       color: THEME_COLOR_BLACK[100],
