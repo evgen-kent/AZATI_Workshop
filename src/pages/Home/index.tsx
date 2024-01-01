@@ -1,31 +1,25 @@
 import Layout from '../../layouts/Layout'
 import style from '../../styles/App.module.scss'
 import ProductCard from '../../components/ProductCard'
-import { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { getProductAction } from '../../store/productSlice'
+import { IProduct } from '../../types/productCardType'
+import { useDispatch, useSelector } from 'react-redux'
+import { productsData } from '../../store/product/productSelector'
+import { useEffect } from 'react'
 import { AppDispatch } from '../../store/store'
-import { product } from '../../types/productCardType'
+import { getProductAction } from '../../store/product/productThunk'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
-	const [products, setProducts] = useState([])
+	const products = useSelector(productsData)
 	useEffect(() => {
 		dispatch(getProductAction())
-			.then(response => {
-				setProducts(response.payload.data)
-			})
-			.catch(error => {
-				console.error('Error fetching types:', error)
-				setProducts([])
-			})
-	}, [])
+	}, [dispatch])
 	return (
 		<Layout title='SHOP.CO'>
 			<div className={style.main}>
 				{/* для примера карточки сделан div с белым фоном  */}
 				<div className={style.products_row}>
-					{products.map((product: product) => (
+					{products.map((product: IProduct) => (
 						<ProductCard
 							key={product.id}
 							name={product.name}
@@ -33,7 +27,6 @@ const Home = (): JSX.Element => {
 						/>
 					))}
 				</div>
-				
 			</div>
 		</Layout>
 	)

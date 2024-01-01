@@ -1,8 +1,8 @@
 import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material'
 import style from '../styles/ProductCard.module.scss'
-import { product } from '../types/productCardType'
+import { IProduct } from '../types/productCardType'
 
-const ProductCard = ({ image, name }: product): JSX.Element => {
+const ProductCard = ({ image, name }: IProduct): JSX.Element => {
 	return (
 		<Card className={style.card}>
 			<CardActionArea>
