@@ -20,13 +20,13 @@ const ProductCard = ({ image, name }: IProduct): JSX.Element => {
 				/>
 				{/* здесь должен быть компонент рейтинга */}
 				<CardContent className={style.card_content}>
-                    <Typography variant='subtitle1'>{title}</Typography>
-					<Typography component='span'>{price}</Typography>
+					<Typography variant='subtitle1'>{name}</Typography>
+					{/* в локальную бд не смог добавить поле цены , т.к похоже она не прописана */}
+					<Typography component='span'>120$</Typography>
 				</CardContent>
 			</CardActionArea>
 		</Card>
 	)
 }
-
 
 export default ProductCard
