@@ -1,33 +1,35 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from '../../store/counterSlice';
-import { RootState } from '../../store/store';
-import Layout from '../../layouts/Layout';
-import style from '../../styles/App.module.scss';
-import Article from '../../components/article/Article';
+import Layout from '../../layouts/Layout'
+import style from '../../styles/App.module.scss'
+import ProductCard from '../../components/ProductCard'
+import { IProduct } from '../../types/productCardType'
+import { useDispatch, useSelector } from 'react-redux'
+import { productsData } from '../../store/product/productSelector'
+import { useEffect } from 'react'
+import { AppDispatch } from '../../store/store'
+import { getProductAction } from '../../store/product/productThunk'
 
-const Home = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
-  return (
-    <Layout title="SHOP.CO">
-      <div className={style.main}>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
-      <Article/>
-    </Layout>
-  );
-};
+const Home = (): JSX.Element => {
+	const dispatch = useDispatch<AppDispatch>()
+	const products = useSelector(productsData)
+	useEffect(() => {
+		dispatch(getProductAction())
+	}, [dispatch])
+	return (
+		<Layout title='SHOP.CO'>
+			<div className={style.main}>
+				{/* для примера карточки сделан div с белым фоном  */}
+				<div className={style.products_row}>
+					{products.map((product: IProduct) => (
+						<ProductCard
+							key={product.id}
+							name={product.name}
+							image={product.image}
+						/>
+					))}
+				</div>
+			</div>
+		</Layout>
+	)
+}
 
-export default Home;
+export default Home
