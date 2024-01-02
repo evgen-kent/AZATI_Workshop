@@ -56,7 +56,9 @@ const Footer = (): JSX.Element => {
 			<div className={style.footer}>
 				<div className={style.list_row}>
 					<div className={style.list_block}>
-						<Typography variant='h3'>shop.co</Typography>
+						<Typography variant='h3' style={{ margin: '52px 0 25px 0' }}>
+							shop.co
+						</Typography>
 						<Typography component='p'>
 							We have clothes that suits your style and which you’re proud to
 							wear. From women to men.
@@ -74,10 +76,14 @@ const Footer = (): JSX.Element => {
 					</div>
 					{footerList.map(item => (
 						<div key={id} className={style.list_block}>
-							<Typography component='h3' className={style.list_h3}>
+							<Typography
+								component='h3'
+								className={style.list_h3}
+								style={{ marginTop: '30px' }}
+							>
 								{item.title}
 							</Typography>
-							<List className={style.list_links}>
+							<List className={style.list_links} style={{ paddingTop: '26px' }}>
 								{item.list.map((listItem, listIndex) => (
 									<ListItemText key={listIndex}>{listItem}</ListItemText>
 								))}

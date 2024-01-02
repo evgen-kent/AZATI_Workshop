@@ -64,8 +64,11 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 19px;
+	:first-child {
+		margin: 0px;
+	}
 	> *:not(:first-child) {
-		margin-top: 20px;
+		margin: 17px 0 0 0;
 	}
 }
 .copy {
@@ -74,7 +77,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 20px;
-	margin-top: 20px;
+	margin-top: 50px;
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	p {
 		color: rgba(0, 0, 0, 0.6);
@@ -83,6 +86,7 @@
 		line-height: normal;
 	}
 	ul {
+		margin: 0;
 		li {
 			display: inline;
 			list-style-type: none;

@@ -65,6 +65,7 @@ const Header = (): JSX.Element => {
 										sx={{
 											display: 'block',
 											padding: '13px 5px 0px 5px',
+											letterSpacing: '-0.64px',
 											textTransform: 'none',
 											marginRight: '10px',
 											fontSize: '16px',
@@ -80,7 +81,7 @@ const Header = (): JSX.Element => {
 								mrLeft='30px'
 								backgroundColor='#DDD9DB'
 								Icon={IoSearch}
-								placeholder='Search'
+								placeholder='Search for products...'
 								width='575px'
 								type='input'
 							/>
