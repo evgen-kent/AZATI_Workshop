@@ -1,74 +1,55 @@
-@font-face {
-  font-family: "Integral CF-Bold";
-  src: url("/src/assets/fonts/IntegralCF/IntegralCF-Bold.woff2") format("woff2");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-Medium";
-  src: url("/src/assets/fonts/Satoshi/Satoshi-M.woff2") format("woff2");
-  font-style: normal;
-}
-
 .login-wrapper {
-  height: 359px;
-  position: relative;
-  width: 326px;
+	height: 359px;
+	position: relative;
+	width: 326px;
 }
 
 .login-wrapper .label {
-  color: #000000;
-  font-family: "Integral CF-Bold", Helvetica;
-  font-size: 48px;
-  font-weight: 700;
-  height: 63px;
-  left: 76px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: -1px;
+	color: #000000;
+	font-size: 48px;
+	font-weight: 700;
+	height: 63px;
+	left: 76px;
+	letter-spacing: 0;
+	line-height: normal;
+	position: absolute;
+	text-align: center;
+	top: -1px;
 }
 
 .login-wrapper .mail {
-  top: 89px;
+	top: 89px;
 }
 
 .login-wrapper .passw {
-  top: 169px;
+	top: 169px;
 }
 
 .login-wrapper .footer {
-  color: transparent;
-  font-family: "Satoshi-Medium", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  left: 51px;
-  letter-spacing: 0;
-  line-height: 22px;
-  position: absolute;
-  top: 336px;
-  white-space: nowrap;
-  margin: 0;
+	color: transparent;
+	font-size: 16px;
+	font-weight: 400;
+	left: 51px;
+	letter-spacing: -0.64px;
+	line-height: 22px;
+	position: absolute;
+	top: 336px;
+	white-space: nowrap;
+	margin: 0;
 }
 
 .login-wrapper .text-remember {
-  color: #000000;
-  font-family: "Satoshi-Medium", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 22px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
+	color: #000000;
+	position: relative;
+	white-space: nowrap;
+	width: fit-content;
 }
 
 .login-wrapper .remember {
-  align-items: center;
-  display: inline-flex;
-  gap: 11px;
-  left: 16px;
-  position: absolute;
-  top: 247px;
+	align-items: center;
+	display: inline-flex;
+	gap: 11px;
+	left: 16px;
+	position: absolute;
+	top: 247px;
 }
