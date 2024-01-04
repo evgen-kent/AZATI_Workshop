@@ -1,10 +1,10 @@
 import Layout from '../../layouts/Layout'
 import style from '../../styles/App.module.scss'
 import ProductCard from '../../components/ProductCard'
+import { useEffect } from 'react'
 import { IProduct } from '../../types/productCardType'
 import { useDispatch, useSelector } from 'react-redux'
 import { productsData } from '../../store/product/productSelector'
-import { useEffect } from 'react'
 import { AppDispatch } from '../../store/store'
 import { getProductAction } from '../../store/product/productThunk'
 
