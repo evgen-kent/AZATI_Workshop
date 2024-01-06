@@ -1,8 +1,18 @@
 .main {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  span {
-    color: black;
-  }
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	span {
+		color: black;
+	}
+}
+.products_row {
+	background-color: white;
+	display: flex;
+	max-width: 1200px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	& > * {
+		margin-top: 40px;
+	}
 }

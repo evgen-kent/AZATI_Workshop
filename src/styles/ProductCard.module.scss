@@ -1,23 +1,24 @@
 .card {
-  max-width: 345px;
-  max-height: 420px;
-  background-color: transparent;
-  box-shadow: none !important;
+	max-width: 345px;
+	max-height: 420px;
+	background-color: transparent;
+	box-shadow: none !important;
 }
 .img {
-  height: 280px;
-  object-fit: contain;
-  background-color: #ddd9db;
-  border-radius: 25px;
+	height: 280px;
+	object-fit: contain;
+	background-color: #ddd9db;
+	border-radius: 25px;
 }
 .card_content {
-  font-family: 'Satoshi-Bold';
-  color: #000;
-  font-style: normal;
-  line-height: normal;
-  h4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
+	color: #000;
+	line-height: normal;
+	h6 {
+		margin-bottom: 20px;
+	}
+	span {
+		font-size: 24px;
+		font-weight: 600;
+		letter-spacing: -0.96px;
+	}
 }
