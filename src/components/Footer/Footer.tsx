@@ -3,9 +3,9 @@ import {
 	footerCredits,
 	footerList,
 	footerSocials
-} from '../../constants/Footer.ts'
-import style from './Footer.module.scss'
-import InputBar from '../InputBar/InputBar.tsx'
+} from '../../constants/footer.ts'
+import style from './footer.module.scss'
+import InputBar from '../input-bar/input-bar.tsx'
 import { TfiEmail } from 'react-icons/tfi'
 import { Button } from '@mui/material'
 

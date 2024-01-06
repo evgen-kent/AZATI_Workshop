@@ -1,7 +1,7 @@
-import Layout from '../../layouts/Layout'
+import Layout from '../../layouts/layout'
 import style from './App.module.scss'
-import ProductCard from '../../components/ProductCard/ProductCard'
-import { productCard } from '../../constants/ProductCard'
+import ProductCard from '../../components/product-card/product-card'
+import { productCard } from '../../constants/product-card'
 import { useId } from 'react'
 
 const Home = (): JSX.Element => {

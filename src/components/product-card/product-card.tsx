@@ -1,6 +1,6 @@
 import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material'
-import style from './ProductCard.module.scss'
-import RatingBar from '../UI/RatingBar'
+import style from './product-card.module.scss'
+import RatingBar from '../UI/rating-bar'
 
 type productCardProps = {
 	img: string
