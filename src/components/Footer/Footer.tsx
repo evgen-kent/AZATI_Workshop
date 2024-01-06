@@ -7,14 +7,17 @@ import {
 import style from './footer.module.scss'
 import InputBar from '../input-bar/input-bar.tsx'
 import { TfiEmail } from 'react-icons/tfi'
-import { Button } from '@mui/material'
+import { Button, List, ListItemText, Typography } from '@mui/material'
+import { white } from '../theme.ts'
 
 const Footer = (): JSX.Element => {
 	const id = useId()
 	return (
 		<div className={style.wrapper}>
 			<div className={style.form}>
-				<p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+				<Typography style={{ color: white }} variant='h3'>
+					STAY UPTO DATE ABOUT OUR LATEST OFFERS
+				</Typography>
 				<div
 					style={{
 						display: 'flex',
@@ -35,12 +38,13 @@ const Footer = (): JSX.Element => {
 						className={style.button_subscribe}
 						sx={{
 							fontSize: '16px',
+							fontWeight: '400',
+							letterSpacing: '-0.64px',
 							borderRadius: '50px',
 							marginTop: '20px',
 							backgroundColor: 'white',
 							color: 'black',
 							textTransform: 'none',
-							fontFamily: 'Satoshi-Medium',
 							padding: '20px 90px'
 						}}
 						variant='contained'
@@ -52,11 +56,13 @@ const Footer = (): JSX.Element => {
 			<div className={style.footer}>
 				<div className={style.list_row}>
 					<div className={style.list_block}>
-						<h3>shop.co</h3>
-						<p>
+						<Typography variant='h3' style={{ margin: '52px 0 25px 0' }}>
+							shop.co
+						</Typography>
+						<Typography component='p'>
 							We have clothes that suits your style and which you’re proud to
 							wear. From women to men.
-						</p>
+						</Typography>
 						<ul className={style.socials_icons}>
 							{footerSocials.map(social => {
 								const Icon = social.icon
@@ -70,17 +76,25 @@ const Footer = (): JSX.Element => {
 					</div>
 					{footerList.map(item => (
 						<div key={id} className={style.list_block}>
-							<h3 className={style.list_h3}>{item.title}</h3>
-							<ul className={style.list_links}>
+							<Typography
+								component='h3'
+								className={style.list_h3}
+								style={{ marginTop: '30px' }}
+							>
+								{item.title}
+							</Typography>
+							<List className={style.list_links} style={{ paddingTop: '26px' }}>
 								{item.list.map((listItem, listIndex) => (
-									<li key={listIndex}>{listItem}</li>
+									<ListItemText key={listIndex}>{listItem}</ListItemText>
 								))}
-							</ul>
+							</List>
 						</div>
 					))}
 				</div>
 				<div className={style.copy}>
-					<p>© 2000-2021, All rights reserved</p>
+					<Typography component='p'>
+						Shop.co © 2000-2023, All Rights Reserved
+					</Typography>
 					<ul>
 						{footerCredits.map(social => {
 							return (

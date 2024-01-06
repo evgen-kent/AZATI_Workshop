@@ -30,19 +30,127 @@ const theme = createTheme({
   },
   typography: {
     allVariants: {
-      fontFamily: 'Satoshi',
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      textTransform: 'none',
     },
     h1: {
-      fontFamily: 'IntegralCF-Bold',
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Archivo Black', 'sans-serif'].join(','),
+      fontSize: '64px',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      letterSpacing: '-1.28px',
+      lineHeight: '64px',
+
+      '@media (max-width:390px)': {
+        fontSize: '36px',
+        letterSpacing: '-0.72px',
+        lineHeight: '34px',
+      },
     },
     h2: {
-      fontFamily: 'IntegralCF-Bold',
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Archivo Black', 'sans-serif'].join(','),
+      fontSize: '48px',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      letterSpacing: '-0.96px',
+      lineHeight: 'normal',
+
+      '@media (max-width:390px)': {
+        fontSize: '32px',
+        letterSpacing: '-0.64px',
+        lineHeight: '36px',
+      },
     },
     h3: {
-      fontFamily: 'IntegralCF-Bold',
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Archivo Black', 'sans-serif'].join(','),
+      fontSize: '40px',
+      fontStyle: 'normal',
+      fontWeight: '400',
+      letterSpacing: '-0.8px',
+      lineHeight: 'normal',
+
+      '@media (max-width:390px)': {
+        fontSize: '24px',
+        letterSpacing: '-0.48px',
+        lineHeight: '28px',
+      },
     },
+    h4: {
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      fontSize: '32px',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      letterSpacing: '-1.28px',
+      lineHeight: 'normal',
+
+      '@media (max-width:390px)': {
+        fontSize: '24px',
+        letterSpacing: '-0.96px',
+      },
+    },
+    h5: {
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      fontSize: '24px',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      letterSpacing: '-0.96px',
+      lineHeight: 'normal',
+
+      '@media (max-width:390px)': {
+        fontSize: '20px',
+        letterSpacing: '-0.8px',
+      },
+    },
+    h6: {
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      fontSize: '20px',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      letterSpacing: '-0.8px',
+      lineHeight: 'normal',
+    },
+    /**
+     * Use this only for product names in card mode & in the cart and for customer's name in reviews.
+     * When using note that lineHeight property is not defined here!
+     */
+    subtitle1: {
+      color: THEME_COLOR_BLACK[100],
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      fontSize: '20px',
+      fontStyle: 'normal',
+      fontWeight: '600',
+      letterSpacing: '-0.8px',
+
+      '@media (max-width:390px)': {
+        fontSize: '16px',
+        letterSpacing: '-0.64px',
+      },
+    },
+    /**
+     * Use this only for descriptions and review text.
+     */
+    body1: {
+      color: THEME_COLOR_BLACK[60],
+      fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(','),
+      fontSize: '16px',
+      fontStyle: 'normal',
+      fontWeight: '300',
+      letterSpacing: '-0.64px',
+      lineHeight: '22px',
+
+      '@media (max-width:390px)': {
+        fontSize: '14px',
+        letterSpacing: '-0.56px',
+        lineHeight: '20px',
+      },
+    }
   },
-  spacing: 2,
 });
 
 
