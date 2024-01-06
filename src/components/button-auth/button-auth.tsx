@@ -1,16 +1,19 @@
-import "./button-auth.css";
+import { Typography } from '@mui/material'
+import './button-auth.css'
 
-type Content = string;
+type Content = string
 type SubmitButtonProps = {
-  content: Content;
-};
+	content: Content
+}
 
 const SubmitButton = ({ content }: SubmitButtonProps): JSX.Element => {
-  return (
-    <div className={`submit-button ${content == "Log in" ? "login" : "reg"}`}>
-      <div className="text-wrapper">{content}</div>
-    </div>
-  );
-};
+	return (
+		<div className={`submit-button ${content == 'Log in' ? 'login' : 'reg'}`}>
+			<Typography variant='button' className='text-wrapper'>
+				{content}
+			</Typography>
+		</div>
+	)
+}
 
-export default SubmitButton;
+export default SubmitButton
