@@ -1,5 +1,5 @@
 import { Button, ButtonProps, styled } from '@mui/material';
-import { THEME_COLOR_BLACK, lightGray, white } from './../../../theme';
+import { THEME_COLOR_BLACK, lightGray, white } from '../../../theme';
 
 interface SecondaryButtonProps extends ButtonProps {
   height: number;

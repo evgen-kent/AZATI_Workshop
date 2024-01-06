@@ -1,6 +1,6 @@
-import Layout from '../../layouts/Layout'
+import Layout from '../../layouts/layout'
 import style from '../../styles/App.module.scss'
-import ProductCard from '../../components/ProductCard'
+import ProductCard from '../../components/product-card/product-card'
 import { useEffect } from 'react'
 import { IProduct } from '../../types/productCardType'
 import { useDispatch, useSelector } from 'react-redux'

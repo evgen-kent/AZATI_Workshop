@@ -3,6 +3,7 @@
 	max-height: 420px;
 	background-color: transparent;
 	box-shadow: none !important;
+	padding-bottom: 20px;
 }
 .img {
 	height: 280px;
@@ -11,14 +12,16 @@
 	border-radius: 25px;
 }
 .card_content {
+	font-family: 'Satoshi-Bold';
 	color: #000;
+	font-style: normal;
 	line-height: normal;
-	h6 {
-		margin-bottom: 20px;
+	h3 {
+		margin-bottom: 10px;
 	}
-	span {
+	h4 {
 		font-size: 24px;
-		font-weight: 600;
-		letter-spacing: -0.96px;
+		font-weight: bold;
+		margin-top: 5px;
 	}
 }

@@ -6,7 +6,7 @@ import {
 	Typography
 } from '@mui/material'
 import style from '../styles/ProductCard.module.scss'
-import { IProduct } from '../types/productCardType'
+import { IProduct } from '../../types/productCardType'
 
 const ProductCard = ({ image, name }: IProduct): JSX.Element => {
 	return (

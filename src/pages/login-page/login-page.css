@@ -1,9 +1,0 @@
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  background-image: url(/src/resources/blur-auth-page.jpg);
-  background-size: cover;
-  background-position: 50% 50%;
-}
