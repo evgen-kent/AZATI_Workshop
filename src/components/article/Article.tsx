@@ -1,47 +1,47 @@
-import {Grid, Typography} from "@mui/material";
+import {Container, Grid, Typography} from "@mui/material";
 import styles from "./Article.module.scss"
-import casual from '../../assets/images/casual.png'
-import formal from '../../assets/images/formal.png'
-import party from '../../assets/images/party.png'
-import gym from '../../assets/images/gym.png'
+import casual from '../../assets/images/article/casual.png'
+import formal from '../../assets/images/article/formal.png'
+import party from '../../assets/images/article/party.png'
+import gym from '../../assets/images/article/gym.png'
 
+const data = [
+    {
+        title: "Casual",
+        image: casual
+    },
+    {
+        title: "Formal",
+        image: formal
+    },
+    {
+        title: "Party",
+        image: party
+    },
+    {
+        title: "Gym",
+        image: gym
+    }
+]
 
 const Article = () => {
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.article}>
-                <Typography variant="h2">BROWSE BY dress STYLE</Typography>
-                <Grid container spacing={10}>
-                    <Grid item xs={12} lg={5}>
+        <Container className={styles.wrap}>
+            <Typography variant="h2" textTransform={"uppercase"} textAlign={"center"} mb={8}>BROWSE BY dress STYLE</Typography>
+            <Grid container spacing={2}>
+                {data.map((item, idx) => (
+                    <Grid item xs={12} lg={idx % 3 > 0 ? 7 : 5}>
                         <a href="#" className={styles.item}>
-                            <p>Casual</p>
-                            <img src={casual} alt=""/>
+                            <Typography
+                                mt={4} ml={4} fontSize={36} fontWeight={700} color={"black"}>
+                                {item.title}
+                            </Typography>
+                            <img src={item.image} alt=""/>
                         </a>
                     </Grid>
-
-                    <Grid item xs={12} lg={7}>
-                        <a href="#" className={styles.item}>
-                            <p>Formal</p>
-                            <img src={formal} alt=""/>
-                        </a>
-                    </Grid>
-
-                    <Grid item xs={12} lg={7}>
-                        <a href="#" className={styles.item}>
-                            <p>Party</p>
-                            <img src={party} alt=""/>
-                        </a>
-                    </Grid>
-
-                    <Grid item xs={12} lg={5}>
-                        <a href="#" className={styles.item}>
-                            <p>Gym</p>
-                            <img src={gym} alt=""/>
-                        </a>
-                    </Grid>
-                </Grid>
-            </div>
-        </div>
+                ))}
+            </Grid>
+        </Container>
     )
 }
 

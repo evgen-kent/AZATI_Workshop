@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { productsData } from '../../store/product/productSelector'
 import { AppDispatch } from '../../store/store'
 import { getProductAction } from '../../store/product/productThunk'
+import Article from "../../components/article/Article";
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -28,6 +29,8 @@ const Home = (): JSX.Element => {
 					))}
 				</div>
 			</div>
+			<Article/>
+			<ProductCard/>
 		</Layout>
 	)
 }
