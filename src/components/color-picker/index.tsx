@@ -1,59 +1,15 @@
 import { useState } from 'react'
-import { styled } from '@mui/material'
-import { Box, Checkbox, Typography, IconButton } from '@mui/material'
+import { Checkbox, Typography, IconButton } from '@mui/material'
 import { MdExpandLess } from 'react-icons/md'
 import theme from '../../theme'
+import {
+	ColorPickerBox,
+	GroupCirclesContainer,
+	BpIcon,
+	BpCheckedIcon
+} from './styled'
 
-const ColorPickerBox = styled(Box)(() => ({
-	alignItems: 'flex-start',
-	display: 'flex',
-	flexDirection: 'column',
-	position: 'relative',
-	width: '247px'
-}))
-
-const GroupCirclesContainer = styled('div')({
-	display: 'grid',
-	gridTemplateColumns: 'repeat(5, 1fr)',
-	gap: '16px',
-	alignItems: 'center'
-})
-
-const BpIcon = styled('span')(({ color }) => ({
-	borderRadius: 18.5,
-	boxSizing: 'border-box',
-	border: '1px solid #00000033',
-	width: 36.5,
-	height: 36.5,
-	position: 'relative',
-	alignItems: 'center',
-	'input ~ &': {
-		backgroundColor: color
-	}
-}))
-
-const BpCheckedIcon = styled(BpIcon)(
-	({ color, colorImg }: { color: string; colorImg: string }) => ({
-		border: '2px solid #00000033',
-		'&::before': {
-			display: 'block',
-			width: 33,
-			height: 32,
-			backgroundImage:
-				"url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath" +
-				" fill-rule='evenodd' clip-rule='evenodd' d='M12 5c-.28 0-.53.11-.71.29L7 9.59l-2.29-2.3a1.003 " +
-				"1.003 0 00-1.42 1.42l3 3c.18.18.43.29.71.29s.53-.11.71-.29l5-5A1.003 1.003 0 0012 5z' fill='" +
-				colorImg +
-				'\' /%3E%3C/svg%3E")',
-			content: '""'
-		},
-		'input:hover ~ &': {
-			backgroundColor: color
-		}
-	})
-)
-
-const ColorPicker = (): JSX.Element => {
+export const ColorPicker = () => {
 	const [colors, setColors] = useState([
 		{ id: 1, color: '#00c12a', selected: false },
 		{ id: 2, color: '#f50505', selected: false },
@@ -140,7 +96,16 @@ const ColorPicker = (): JSX.Element => {
 							checkedIcon={
 								<BpCheckedIcon
 									color={elem.color}
-									colorImg={elem.color == '#ffffff' ? '%23000' : '%23fff'}
+									colorimg={`
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+									  <path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12 5c-.28 0-.53.11-.71.29L7 9.59l-2.29-2.3a1.003 1.003 0 00-1.42 1.42l3 3c.18.18.43.29.71.29s.53-.11.71-.29l5-5A1.003 1.003 0 0012 5z"
+										fill="${elem.color == '#ffffff' ? '#000' : '#fff'}"
+									  />
+									</svg>
+								  `}
 								></BpCheckedIcon>
 							}
 							disableRipple
@@ -154,5 +119,3 @@ const ColorPicker = (): JSX.Element => {
 		</ColorPickerBox>
 	)
 }
-
-export default ColorPicker
