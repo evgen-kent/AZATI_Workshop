@@ -6,6 +6,10 @@ import { TfiEmail } from 'react-icons/tfi'
 import { IoEyeSharp } from 'react-icons/io5'
 import { IoEyeOff } from 'react-icons/io5'
 import { MdLock } from 'react-icons/md'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '../store/store'
+import { registrationAction } from '../store/registration/registrationThunk'
+import { loginAction } from '../store/login/loginThunk'
 
 type Props = {
 	open: boolean
@@ -14,14 +18,28 @@ type Props = {
 }
 
 const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
+	const [username, setUsername] = useState('')
+	const [password, setPassword] = useState('')
 	const [inputType, setInputType] = useState(type)
+	const dispatch = useDispatch<AppDispatch>()
 	const [text, setText] = useState('')
-
-	const handleClear = () => {
+	const changeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setUsername(e.target.value)
+	}
+	const changePass = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setPassword(e.target.value)
+	}
+	const handleRegistration = () => {
 		setText('')
+		dispatch(registrationAction({ username, password }))
 		handleClose()
 	}
-
+	const handleLogin = () => {
+		setText('')
+		dispatch(loginAction({ username, password }))
+		handleClose()
+		setTimeout(() => window.location.reload(), 1000)
+	}
 	const toggleInputType = () => {
 		switch (inputType) {
 			case 'login':
@@ -34,6 +52,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 				setInputType('login')
 		}
 	}
+
 	return (
 		<Modal
 			keepMounted
@@ -53,6 +72,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							backgroundColor='#ffffff'
 							width='325px'
 							type='input'
+							setValue={changeName}
 						/>
 						<InputBar
 							mrLeft='0px'
@@ -63,6 +83,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							SecondIcon={IoEyeSharp}
 							ThirdIcon={IoEyeOff}
 							type='password'
+							setValue={changePass}
 						/>
 						<InputBar
 							type='password'
@@ -74,7 +95,10 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							SecondIcon={IoEyeSharp}
 							ThirdIcon={IoEyeOff}
 						/>
-						<button className={style.button} onClick={handleClear}>
+						<button
+							onClick={() => handleRegistration()}
+							className={style.button}
+						>
 							Sign Up
 						</button>
 						<div style={{ cursor: 'pointer' }} onClick={toggleInputType}>
@@ -92,6 +116,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							backgroundColor='#ffffff'
 							width='325px'
 							type='input'
+							setValue={changeName}
 						/>
 						<InputBar
 							mrLeft='0px'
@@ -102,8 +127,9 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							SecondIcon={IoEyeSharp}
 							ThirdIcon={IoEyeOff}
 							type='password'
+							setValue={changePass}
 						/>
-						<button className={style.button} onClick={handleClear}>
+						<button onClick={() => handleLogin()} className={style.button}>
 							Log In
 						</button>
 						<div style={{ cursor: 'pointer' }} onClick={toggleInputType}>
@@ -119,7 +145,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							onChange={e => setText(e.target.value)}
 							className={style.textArea}
 						/>
-						<button onClick={handleClear}>Send review</button>
+						<button>Send review</button>
 					</>
 				)}
 			</Box>

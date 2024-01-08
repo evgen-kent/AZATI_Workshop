@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-	baseURL: 'http://localhost:5000'
+	baseURL: 'http://localhost:3000'
 })
 
 api.interceptors.request.use(
@@ -14,6 +14,15 @@ api.interceptors.request.use(
 	},
 	error => {
 		Promise.reject(error)
+	}
+)
+api.interceptors.response.use(
+	response => response,
+	error => {
+		if (error.response.status === 401) {
+			//здесь нужно перенаправить на 401 страницу (когда сделайте её , то сюда не забудь)
+		}
+		return Promise.reject(error)
 	}
 )
 
