@@ -1,15 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { api, token } from '../../constants/api'
-import axios from 'axios'
+import api from '../../api/autorization'
 
 export const getProductAction = createAsyncThunk('getProducts', async () => {
-	const PRODUCT_URL = `${api}products`
 	try {
-		const response = await axios.get(PRODUCT_URL, {
-			headers: {
-				Authorization: `Bearer ${token}`
-			}
-		})
+		const response = await api.get('/products')
 		return response.data.data
 	} catch (error) {
 		console.error('Error fetching products:', error)
