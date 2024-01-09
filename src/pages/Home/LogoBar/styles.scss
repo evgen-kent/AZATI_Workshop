@@ -1,0 +1,48 @@
+.brands {
+	height: 122px;
+	width: 100vw;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.brands-wrapper {
+	width: 86vw;
+	height: 38px;
+}
+
+.brands-list {
+	width: inherit;
+	height: inherit;
+	padding: 0 !important;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media (max-width: 390px) {
+	.Brands {
+		height: 146px;
+	}
+
+	.brands-wrapper {
+		width: 92vw;
+		height: 68px;
+	}
+
+	.brands-list {
+		width: 360px;
+		height: 68px;
+
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: space-between;
+		gap: 0 34px;
+
+		li {
+			padding: 0;
+		}
+	}
+}

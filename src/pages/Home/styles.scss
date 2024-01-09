@@ -1,0 +1,204 @@
+.MainHat {
+	background-color: #f2f0f1;
+	width: 100vw;
+	height: 785px;
+
+	display: grid;
+}
+
+.MainInfoWrapper {
+	width: 86vw;
+	height: 663px;
+
+	display: flex;
+	justify-self: center;
+	align-items: space-between;
+}
+
+.WelcomeTextWrapper {
+	width: inherit;
+
+	margin-top: 93px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.H1 {
+	width: 582px;
+}
+
+.Body2 {
+	width: 582px;
+
+	margin-top: 23px !important;
+	margin-bottom: 31px !important;
+
+	font-size: 16px !important;
+	font-weight: 300 !important;
+	letter-spacing: -0.64px !important;
+	line-height: 22px !important;
+}
+
+button p {
+	font-weight: 400 !important;
+	line-height: normal !important;
+}
+
+.statistics-wrapper {
+	width: 582px;
+
+	margin-top: 48px;
+
+	display: flex;
+	flex-direction: row;
+	gap: 28px;
+	justify-content: space-between;
+
+	.statistics-box {
+		display: flex;
+		flex-direction: column;
+		gap: -2px;
+
+		.statistics-value {
+			font-size: 40px !important;
+			font-weight: 600 !important;
+			line-height: normal !important;
+			letter-spacing: -1.6px !important;
+		}
+
+		.statistics-value-definition {
+			font-size: 16px !important;
+			font-weight: 300 !important;
+			line-height: 22px !important;
+			letter-spacing: -0.64px !important;
+		}
+	}
+
+	.divider {
+		width: 1px;
+		height: 71px;
+	}
+}
+
+.stars-container {
+	width: 609px;
+	height: 267px;
+
+	position: absolute;
+	top: 16.5vh;
+	right: 7.5vw;
+
+	:first-child {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+	:last-child {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+}
+
+@media (max-width: 390px) {
+	.MainHat {
+		height: 999px;
+	}
+
+	.MainInfoWrapper {
+		width: inherit;
+		height: 813px;
+		margin-top: 40px;
+
+		flex-direction: column;
+	}
+
+	.WelcomeTextWrapper {
+		width: 92vw;
+		margin: 0 4vw;
+
+		align-items: center;
+	}
+
+	.H1 {
+		width: inherit;
+	}
+
+	.Body2 {
+		width: inherit;
+
+		margin-top: 20px !important;
+		margin-bottom: 24px !important;
+
+		font-size: 14px !important;
+		letter-spacing: -0.56px !important;
+		line-height: 20px !important;
+	}
+
+	button p {
+		font-weight: 500 !important;
+	}
+
+	.statistics-wrapper {
+		width: 278px;
+		height: 110px;
+
+		margin-top: 20px;
+
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 12px 25px;
+		justify-content: center;
+		align-content: space-between;
+
+		.statistics-box {
+			gap: -6px;
+
+			.statistics-value {
+				font-size: 24px !important;
+				letter-spacing: -0.96px !important;
+			}
+
+			.statistics-value-definition {
+				font-size: 12px !important;
+				letter-spacing: -0.48px !important;
+			}
+		}
+
+		.divider {
+			height: 52px;
+		}
+
+		.escaping-divider {
+			display: none;
+		}
+	}
+
+	.trendy-image {
+		width: unset !important;
+		height: 448px !important;
+		object-fit: cover;
+	}
+
+	.stars-container {
+		width: 342px;
+		height: 141px;
+
+		top: 77.57vh;
+		right: 5.38vw;
+
+		:first-child {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+
+		:last-child {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+		}
+	}
+}
