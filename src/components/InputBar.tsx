@@ -57,7 +57,7 @@ const StyledInputBase = styled(InputBase)(() => ({
 	paddingRight: '40px',
 	paddingTop: '3px',
 	height: '100%',
-	fontFamily: 'Satoshi-Medium'
+	fontFamily: ['Be Vietnam Pro', 'sans-serif'].join(', ')
 }))
 
 const InputBar = ({
