@@ -9,9 +9,9 @@ import {
 import { FaRegCircleUser } from 'react-icons/fa6'
 import { FiShoppingCart } from 'react-icons/fi'
 import { IoSearch } from 'react-icons/io5'
-import InputBar from './InputBar'
+import InputBar from '../input-bar/input-bar'
 import { useState } from 'react'
-import ModalForm from './ModalForm'
+import ModalForm from '../modal-form/modal-form'
 
 const pages = ['Shop', 'On Sale', 'New Arrivals', 'Brands']
 
