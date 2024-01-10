@@ -1,0 +1,12 @@
+.products {
+	background-color: white;
+	display: flex;
+	max-width: 100%;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	& > * {
+		margin-top: 40px;
+		flex: 0 0 25%; 
+    	box-sizing: border-box; 
+	}
+}
