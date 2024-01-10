@@ -1,4 +1,4 @@
-import TextInput from '../UI/TextInput'
+import TextInput from '../UI/text-input/index'
 import './input-auth.css'
 
 interface InputProps {
