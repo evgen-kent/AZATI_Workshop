@@ -3,7 +3,7 @@ import {
 	footerCredits,
 	footerList,
 	footerSocials
-} from '../../constants/footer.ts'
+} from '../../constants/footer'
 import style from './footer.module.scss'
 import InputBar from '../input-bar/input-bar.tsx'
 import { TfiEmail } from 'react-icons/tfi'
