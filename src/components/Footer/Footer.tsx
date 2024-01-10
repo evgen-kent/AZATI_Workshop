@@ -10,6 +10,7 @@ import {
 	footerSocials
 } from '../../constants/footerConstants.ts'
 
+
 const Footer = (): JSX.Element => {
 	const id = useId()
 	return (
