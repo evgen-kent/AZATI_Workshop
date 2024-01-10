@@ -8,7 +8,7 @@ import {
 	footerCredits,
 	footerList,
 	footerSocials
-} from '../../constants/footer.ts'
+} from '../../constants/footerConstants.ts'
 
 const Footer = (): JSX.Element => {
 	const id = useId()
