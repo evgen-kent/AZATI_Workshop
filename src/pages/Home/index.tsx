@@ -1,5 +1,5 @@
-import Layout from '../../layouts/layout'
-import style from '../../styles/App.module.scss'
+import Layout from './../../layouts/Layout'
+import style from './App.module.scss'
 import ProductCard from '../../components/product-card/product-card'
 import { useEffect } from 'react'
 import { IProduct } from '../../types/productCardType'
@@ -8,13 +8,12 @@ import { productsData } from '../../store/product/productSelector'
 import { AppDispatch } from '../../store/store'
 import { getProductAction } from '../../store/product/productThunk'
 import { Box, Typography, useMediaQuery } from '@mui/material'
-import PrimaryButton from '../../components/UI/PrimaryButton'
 import theme, { THEME_COLOR_BLACK, white } from '../../theme'
 import './styles.scss'
 import TrendyImage from './../../assets/img/trendy-fashionable-couple-posing.jpg'
 import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
-import Article from "../../components/article/Article";
+import PrimaryButton from '../../components/UI/primary-button'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -138,7 +137,6 @@ const Home = (): JSX.Element => {
 					))}
 				</div>
 			</div>
-			<Article/>
 		</Layout>
 	)
 }
