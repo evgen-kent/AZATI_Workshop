@@ -3,27 +3,28 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { productInfo } from './../../constants/product'
 import Layout from './../../layouts/Layout'
+import { IProductInfo } from 'types/productInfoType'
 
 const Product = () => {
 	const { productId } = useParams()
-	const [tmpText, setTmpText] = useState("You're on Product page")
+	const [errorText, setErrorText] = useState('')
 
-	const [product, setProduct] = useState()
+	const [product, setProduct] = useState({} as IProductInfo)
 	useEffect(() => {
-		const isProductExists = productInfo.find(
-			product => product.id === Number(productId)
-		)
-		if (isProductExists) {
-			setProduct(isProductExists)
+		const foundProduct = productInfo.find(p => p.id === Number(productId))
+
+		if (foundProduct) {
+			setProduct(foundProduct)
 		} else {
-			setTmpText('404')
+			// TODO: change this to redirect to 404 page (when it will be done)
+			setErrorText('404')
+			console.error(errorText)
 		}
-		console.log(isProductExists)
-	}, [])
+	}, [productId, errorText])
 
 	return (
 		<Layout title='SHOP.CO'>
-			<Typography>{tmpText}</Typography>
+			<Typography>{product.title}</Typography>
 		</Layout>
 	)
 }
