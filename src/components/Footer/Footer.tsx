@@ -4,7 +4,11 @@ import InputBar from '../input-bar/input-bar.tsx'
 import { TfiEmail } from 'react-icons/tfi'
 import { Button, List, ListItemText, Typography } from '@mui/material'
 import { white } from '../../theme.ts'
-import { footerCredits, footerList, footerSocials } from '../../constants/footer.ts'
+import {
+	footerCredits,
+	footerList,
+	footerSocials
+} from '../../constants/footer.ts'
 
 const Footer = (): JSX.Element => {
 	const id = useId()
