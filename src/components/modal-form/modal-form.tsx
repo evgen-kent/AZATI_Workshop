@@ -7,9 +7,9 @@ import { IoEyeSharp } from 'react-icons/io5'
 import { IoEyeOff } from 'react-icons/io5'
 import { MdLock } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
-import { AppDispatch } from '../store/store'
-import { registrationAction } from '../store/registration/registrationThunk'
-import { loginAction } from '../store/login/loginThunk'
+import { AppDispatch } from '../../store/store'
+import { registrationAction } from '../../store/registration/registrationThunk'
+import { loginAction } from '../../store/login/loginThunk'
 
 type Props = {
 	open: boolean
