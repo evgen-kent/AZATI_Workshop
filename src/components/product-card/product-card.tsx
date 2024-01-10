@@ -1,6 +1,12 @@
-import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material'
+import {
+	Card,
+	CardActionArea,
+	CardContent,
+	CardMedia,
+	Typography
+} from '@mui/material'
 import style from '../styles/ProductCard.module.scss'
-import { IProduct } from '../types/productCardType'
+import { IProduct } from '../../types/productCardType'
 
 const ProductCard = ({ image, name }: IProduct): JSX.Element => {
 	return (
@@ -14,9 +20,9 @@ const ProductCard = ({ image, name }: IProduct): JSX.Element => {
 				/>
 				{/* здесь должен быть компонент рейтинга */}
 				<CardContent className={style.card_content}>
-					<h3>{name}</h3>
+					<Typography variant='subtitle1'>{name}</Typography>
 					{/* в локальную бд не смог добавить поле цены , т.к похоже она не прописана */}
-					<h4>120$</h4>
+					<Typography component='span'>120$</Typography>
 				</CardContent>
 			</CardActionArea>
 		</Card>

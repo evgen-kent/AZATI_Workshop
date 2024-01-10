@@ -1,10 +1,17 @@
-import { AppBar, Box, Button, Container, Toolbar } from '@mui/material'
+import {
+	AppBar,
+	Box,
+	Button,
+	Container,
+	Toolbar,
+	Typography
+} from '@mui/material'
 import { FaRegCircleUser } from 'react-icons/fa6'
 import { FiShoppingCart } from 'react-icons/fi'
 import { IoSearch } from 'react-icons/io5'
-import InputBar from './InputBar'
+import InputBar from '../input-bar/input-bar'
 import { useState } from 'react'
-import ModalForm from './ModalForm'
+import ModalForm from '../modal-form/modal-form'
 
 const pages = ['Shop', 'On Sale', 'New Arrivals', 'Brands']
 
@@ -31,19 +38,25 @@ const Header = (): JSX.Element => {
 								href='#app-bar-with-responsive-menu'
 								sx={{
 									mr: 2,
-									fontSize: '32px',
 									display: { xs: 'none', md: 'flex' },
-									fontFamily: 'IntegralCF-Bold',
-									fontWeight: 700,
-									letterSpacing: '.3rem',
 									textDecoration: 'none',
 									textTransform: 'uppercase',
 									textAlign: 'center',
-									padding: '0px',
-									color: 'black'
+									padding: '0px'
 								}}
 							>
-								shop.co
+								<Typography
+									style={{
+										color: 'black',
+										fontFamily: ['Archivo Black', 'sans-serif'].join(','),
+										fontSize: '32px',
+										fontWeight: 400,
+										letterSpacing: '-0.64px',
+										textTransform: 'uppercase'
+									}}
+								>
+									shop.co
+								</Typography>
 							</Button>
 							<div style={{ display: 'flex', marginLeft: '40px' }}>
 								{pages.map(page => (
@@ -52,10 +65,11 @@ const Header = (): JSX.Element => {
 										sx={{
 											display: 'block',
 											padding: '13px 5px 0px 5px',
+											letterSpacing: '-0.64px',
 											textTransform: 'none',
 											marginRight: '10px',
 											fontSize: '16px',
-											fontFamily: 'Satoshi-Medium',
+											fontWeight: '400',
 											color: 'black'
 										}}
 									>
@@ -67,7 +81,7 @@ const Header = (): JSX.Element => {
 								mrLeft='30px'
 								backgroundColor='#DDD9DB'
 								Icon={IoSearch}
-								placeholder='Search'
+								placeholder='Search for products...'
 								width='575px'
 								type='input'
 							/>
