@@ -12,6 +12,7 @@ type SearchProps = {
 	type: 'password' | 'input'
 	SecondIcon?: IconType
 	ThirdIcon?: IconType
+	setValue?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const Search = styled('div')(
@@ -68,13 +69,15 @@ const InputBar = ({
 	backgroundColor,
 	width,
 	mrLeft,
-	type
+	type,
+	setValue
 }: SearchProps): JSX.Element => {
 	const [inputType, setInputType] = useState(type)
 
 	const toggleInputType = () => {
 		setInputType(inputType === 'password' ? 'input' : 'password')
 	}
+
 	return (
 		<>
 			<Search
@@ -88,7 +91,11 @@ const InputBar = ({
 				<SearchIconWrapper>
 					<Icon />
 				</SearchIconWrapper>
-				<StyledInputBase placeholder={placeholder} type={inputType} />
+				<StyledInputBase
+					placeholder={placeholder}
+					type={inputType}
+					onChange={setValue}
+				/>
 				{SecondIcon && ThirdIcon && (
 					<div
 						style={{
