@@ -44,7 +44,7 @@ const Home = (): JSX.Element => {
 							designed to bring out your individuality and cater to your sense
 							of style.
 						</Typography>
-						<PrimaryButton width={primaryButtonWidth} height={52}>
+						<PrimaryButton sx={{ width: primaryButtonWidth, height: 52 }}>
 							<Typography color={white}>Shop Now</Typography>
 						</PrimaryButton>
 						<Box
