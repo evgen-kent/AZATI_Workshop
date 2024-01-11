@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import style from './Products.module.scss'
 
 
-const Products = (): JSX.Element => {
+const Products = () => {
     const products = useSelector(productsData)
 
     return (
