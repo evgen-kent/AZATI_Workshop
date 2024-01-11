@@ -38,7 +38,6 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 		setText('')
 		dispatch(loginAction({ email, password }))
 		handleClose()
-		// setTimeout(() => window.location.reload(), 1000)
 	}
 	const toggleInputType = () => {
 		switch (inputType) {
