@@ -1,3 +1,5 @@
+import { IColors } from "./colorType"
+
 export type IProductInfo = {
   id: number
   title: string
@@ -7,6 +9,6 @@ export type IProductInfo = {
   initialCost?: number
   discount?: number
   description?: string
-  colors: string[]
-  sizes: string[]
+  colors: IColors[]
+  sizes?: string[]
 }
