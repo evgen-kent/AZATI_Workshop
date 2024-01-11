@@ -22,11 +22,11 @@ const LogoBar = (): JSX.Element => {
 	return (
 		<Box className='brands' bgcolor={THEME_COLOR_BLACK[100]}>
 			<Box className='brands-wrapper'>
-				<List className='brands-list'>
+				<List className='brands-list' sx={{ padding: 0 }}>
 					<ListItem
 						sx={{
-							width: `${versaceWidth}px !important`,
-							height: `${versaceHeight}px !important`
+							width: `${versaceWidth}px`,
+							height: `${versaceHeight}px`
 						}}
 					>
 						<img
@@ -38,8 +38,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${zaraWidth}px !important`,
-							height: `${zaraHeight}px !important`
+							width: `${zaraWidth}px`,
+							height: `${zaraHeight}px`
 						}}
 					>
 						<img
@@ -51,8 +51,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${gucciWidth}px !important`,
-							height: `${gucciHeight}px !important`
+							width: `${gucciWidth}px`,
+							height: `${gucciHeight}px`
 						}}
 					>
 						<img
@@ -64,8 +64,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${pradaWidth}px !important`,
-							height: `${pradaHeight}px !important`
+							width: `${pradaWidth}px`,
+							height: `${pradaHeight}px`
 						}}
 					>
 						<img
@@ -77,8 +77,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${calvinKleinWidth}px !important`,
-							height: `${calvinKleinHeight}px !important`
+							width: `${calvinKleinWidth}px`,
+							height: `${calvinKleinHeight}px`
 						}}
 					>
 						<img

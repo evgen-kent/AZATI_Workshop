@@ -39,13 +39,29 @@ const Home = (): JSX.Element => {
 							className='Body2'
 							variant='body2'
 							color={theme.palette.primary.light}
+							sx={{
+								marginTop: { xs: '20px', md: '23px' },
+								marginBottom: { xs: '24px', md: '31px' },
+								fontSize: { xs: '14px', md: '16px' },
+								fontWeight: '300',
+								letterSpacing: { xs: '-0.56px', md: '-0.64px' },
+								lineHeight: { xs: '20px', md: '22px' }
+							}}
 						>
 							Browse through our diverse range of meticulously crafted garments,
 							designed to bring out your individuality and cater to your sense
 							of style.
 						</Typography>
 						<PrimaryButton width={primaryButtonWidth} height={52}>
-							<Typography color={white}>Shop Now</Typography>
+							<Typography
+								color={white}
+								sx={{
+									fontWeight: { xs: '500', md: '400' },
+									lineHeight: 'normal'
+								}}
+							>
+								Shop Now
+							</Typography>
 						</PrimaryButton>
 						<Box
 							className='statistics-wrapper'
@@ -54,15 +70,25 @@ const Home = (): JSX.Element => {
 							<Box className='statistics-box'>
 								<Typography
 									variant='body1'
-									className='statistics-value'
 									color={theme.palette.primary.main}
+									sx={{
+										fontSize: { xs: '24px', md: '40px' },
+										fontWeight: '600',
+										lineHeight: 'normal',
+										letterSpacing: { xs: '-0.96px', md: '-1.6px' }
+									}}
 								>
 									200+
 								</Typography>
 								<Typography
 									variant='body2'
-									className='statistics-value-definition'
 									color={theme.palette.primary.light}
+									sx={{
+										fontSize: { xs: '12px', md: '16px' },
+										fontWeight: '300',
+										lineHeight: '22px',
+										letterSpacing: { xs: '-0.48px', md: '-0.64px' }
+									}}
 								>
 									International Brands
 								</Typography>
@@ -71,15 +97,25 @@ const Home = (): JSX.Element => {
 							<Box className='statistics-box'>
 								<Typography
 									variant='body1'
-									className='statistics-value'
 									color={theme.palette.primary.main}
+									sx={{
+										fontSize: { xs: '24px', md: '40px' },
+										fontWeight: '600',
+										lineHeight: 'normal',
+										letterSpacing: { xs: '-0.96px', md: '-1.6px' }
+									}}
 								>
 									2,000+
 								</Typography>
 								<Typography
 									variant='body2'
-									className='statistics-value-definition'
 									color={theme.palette.primary.light}
+									sx={{
+										fontSize: { xs: '12px', md: '16px' },
+										fontWeight: '300',
+										lineHeight: '22px',
+										letterSpacing: { xs: '-0.48px', md: '-0.64px' }
+									}}
 								>
 									High-Quality Products
 								</Typography>
@@ -91,15 +127,25 @@ const Home = (): JSX.Element => {
 							<Box className='statistics-box'>
 								<Typography
 									variant='body1'
-									className='statistics-value'
 									color={theme.palette.primary.main}
+									sx={{
+										fontSize: { xs: '24px', md: '40px' },
+										fontWeight: '600',
+										lineHeight: 'normal',
+										letterSpacing: { xs: '-0.96px', md: '-1.6px' }
+									}}
 								>
 									30,000+
 								</Typography>
 								<Typography
 									variant='body2'
-									className='statistics-value-definition'
 									color={theme.palette.primary.light}
+									sx={{
+										fontSize: { xs: '12px', md: '16px' },
+										fontWeight: '300',
+										lineHeight: '22px',
+										letterSpacing: { xs: '-0.48px', md: '-0.64px' }
+									}}
 								>
 									Happy Customers
 								</Typography>
@@ -111,8 +157,8 @@ const Home = (): JSX.Element => {
 						component='img'
 						className='trendy-image'
 						sx={{
-							height: 663,
-							width: 670
+							height: { xs: '448px', md: '663px' },
+							width: { xs: 'unset', md: '670px' }
 						}}
 						alt=''
 						src={TrendyImage}
