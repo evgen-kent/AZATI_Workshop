@@ -4,14 +4,14 @@ import { IUser } from '../../types/userType'
 
 export const registrationAction = createAsyncThunk(
 	'registration',
-	async ({ username, password }: IUser) => {
+	async ({ email, password }: IUser) => {
 		try {
-			const response = await api.post('/auth/registration', {
-				username,
+			const response = await api.post('/auth/signup', {
+				email,
 				password
 			})
-			console.log(response)
-			return response.data.data
+			localStorage.setItem('accessToken', response.data.token.access_token)
+			return response.data.token.access_token
 		} catch (error) {
 			console.error('Error fetching registration:', error)
 			throw error

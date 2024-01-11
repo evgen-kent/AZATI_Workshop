@@ -11,7 +11,7 @@ type loginState = {
 
 const initialState: loginState = {
 	data: {
-		username: '',
+		email: '',
 		password: ''
 	},
 	status: 'idle',
