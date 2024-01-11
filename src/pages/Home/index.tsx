@@ -14,6 +14,7 @@ import TrendyImage from './../../assets/img/trendy-fashionable-couple-posing.jpg
 import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
+import Article from '../../components/article/Article'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -137,6 +138,7 @@ const Home = (): JSX.Element => {
 					))}
 				</div>
 			</div>
+			<Article/>
 		</Layout>
 	)
 }
