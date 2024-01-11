@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-	baseURL: `https://azati-workshop-be.fly.dev/`
+	baseURL:  `https://azati-workshop-be.fly.dev/`
 })
 
 api.interceptors.request.use(
