@@ -3,21 +3,12 @@ import SvgIcon from '@mui/material/SvgIcon'
 export interface IconProps {
 	height: number
 	width: number
+	viewBox?: string
 	children?: JSX.Element | JSX.Element[]
 }
-const Svg = ({ height, width, children }: IconProps) => {
-	const minViewBox = 100
-	const isSquareSvg =
-		width == height && (width < minViewBox || height < minViewBox)
+const Svg = ({ height, width, viewBox, children }: IconProps) => {
 	return (
-		<SvgIcon
-			style={{ width: width, height: height }}
-			viewBox={
-				isSquareSvg
-					? `0 0 ${minViewBox} ${minViewBox}`
-					: `0 0 ${width} ${height}`
-			}
-		>
+		<SvgIcon style={{ width: width, height: height }} viewBox={viewBox}>
 			{children}
 		</SvgIcon>
 	)

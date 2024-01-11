@@ -1,3 +1,5 @@
 import StarIcon from './StarIcon'
+import IncreaseIcon from './IncreaseIcon'
+import ReduceIcon from './ReduceIcon'
 
-export { StarIcon }
+export { StarIcon, IncreaseIcon, ReduceIcon }
