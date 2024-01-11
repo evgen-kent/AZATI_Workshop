@@ -39,7 +39,7 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-         env:
+        env:
           VITE_SERVICE_URL: ${{ secrets.VITE_SERVICE_URL }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
