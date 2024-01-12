@@ -14,6 +14,12 @@ import TrendyImage from './../../assets/img/trendy-fashionable-couple-posing.jpg
 import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
+import {
+	StyledBody2,
+	StyledButtonText,
+	StyledStatisticsValueDefinitionTypography,
+	StyledStatisticsValueTypography
+} from './styled'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -35,7 +41,7 @@ const Home = (): JSX.Element => {
 						<Typography className='H1' variant='h1'>
 							FIND CLOTHES THAT MATCHES YOUR STYLE
 						</Typography>
-						<Typography
+						<StyledBody2
 							className='Body2'
 							variant='body2'
 							color={theme.palette.primary.light}
@@ -43,66 +49,60 @@ const Home = (): JSX.Element => {
 							Browse through our diverse range of meticulously crafted garments,
 							designed to bring out your individuality and cater to your sense
 							of style.
-						</Typography>
+						</StyledBody2>
 						<PrimaryButton width={primaryButtonWidth} height={52}>
-							<Typography color={white}>Shop Now</Typography>
+							<StyledButtonText color={white}>Shop Now</StyledButtonText>
 						</PrimaryButton>
 						<Box
 							className='statistics-wrapper'
 							color={theme.palette.primary.main}
 						>
 							<Box className='statistics-box'>
-								<Typography
+								<StyledStatisticsValueTypography
 									variant='body1'
-									className='statistics-value'
 									color={theme.palette.primary.main}
 								>
 									200+
-								</Typography>
-								<Typography
+								</StyledStatisticsValueTypography>
+								<StyledStatisticsValueDefinitionTypography
 									variant='body2'
-									className='statistics-value-definition'
 									color={theme.palette.primary.light}
 								>
 									International Brands
-								</Typography>
+								</StyledStatisticsValueDefinitionTypography>
 							</Box>
 							<Box bgcolor={THEME_COLOR_BLACK[10]} className='divider'></Box>
 							<Box className='statistics-box'>
-								<Typography
+								<StyledStatisticsValueTypography
 									variant='body1'
-									className='statistics-value'
 									color={theme.palette.primary.main}
 								>
 									2,000+
-								</Typography>
-								<Typography
+								</StyledStatisticsValueTypography>
+								<StyledStatisticsValueDefinitionTypography
 									variant='body2'
-									className='statistics-value-definition'
 									color={theme.palette.primary.light}
 								>
 									High-Quality Products
-								</Typography>
+								</StyledStatisticsValueDefinitionTypography>
 							</Box>
 							<Box
 								bgcolor={THEME_COLOR_BLACK[10]}
 								className='divider escaping-divider'
 							></Box>
 							<Box className='statistics-box'>
-								<Typography
+								<StyledStatisticsValueTypography
 									variant='body1'
-									className='statistics-value'
 									color={theme.palette.primary.main}
 								>
 									30,000+
-								</Typography>
-								<Typography
+								</StyledStatisticsValueTypography>
+								<StyledStatisticsValueDefinitionTypography
 									variant='body2'
-									className='statistics-value-definition'
 									color={theme.palette.primary.light}
 								>
 									Happy Customers
-								</Typography>
+								</StyledStatisticsValueDefinitionTypography>
 							</Box>
 						</Box>
 					</Box>
@@ -111,8 +111,8 @@ const Home = (): JSX.Element => {
 						component='img'
 						className='trendy-image'
 						sx={{
-							height: 663,
-							width: 670
+							height: { xs: '448px', md: '663px' },
+							width: { xs: 'unset', md: '670px' }
 						}}
 						alt=''
 						src={TrendyImage}

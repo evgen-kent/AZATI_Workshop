@@ -8,25 +8,29 @@ import CalvinKleinImage from './../../../assets/img/calvin-klein-image.png'
 import './styles.scss'
 
 const LogoBar = (): JSX.Element => {
-	const versaceWidth = useMediaQuery('(max-width: 390px)') ? 117 : 167
-	const versaceHeight = useMediaQuery('(max-width: 390px)') ? 24 : 34
-	const zaraWidth = useMediaQuery('(max-width: 390px)') ? 65 : 92
-	const zaraHeight = useMediaQuery('(max-width: 390px)') ? 27 : 38
-	const gucciWidth = useMediaQuery('(max-width: 390px)') ? 110 : 157
-	const gucciHeight = useMediaQuery('(max-width: 390px)') ? 26 : 36
-	const pradaWidth = useMediaQuery('(max-width: 390px)') ? 127 : 195
-	const pradaHeight = useMediaQuery('(max-width: 390px)') ? 21 : 32
-	const calvinKleinWidth = useMediaQuery('(max-width: 390px)') ? 135 : 208
-	const calvinKleinHeight = useMediaQuery('(max-width: 390px)') ? 23 : 34
+	const versaceWidth = useMediaQuery('(max-width: 390px)') ? '117px' : '167px'
+	const versaceHeight = useMediaQuery('(max-width: 390px)') ? '24px' : '34px'
+	const zaraWidth = useMediaQuery('(max-width: 390px)') ? '65px' : '92px'
+	const zaraHeight = useMediaQuery('(max-width: 390px)') ? '27px' : '38px'
+	const gucciWidth = useMediaQuery('(max-width: 390px)') ? '110px' : '157px'
+	const gucciHeight = useMediaQuery('(max-width: 390px)') ? '26px' : '36px'
+	const pradaWidth = useMediaQuery('(max-width: 390px)') ? '127px' : '195px'
+	const pradaHeight = useMediaQuery('(max-width: 390px)') ? '21px' : '32px'
+	const calvinKleinWidth = useMediaQuery('(max-width: 390px)')
+		? '135px'
+		: '208px'
+	const calvinKleinHeight = useMediaQuery('(max-width: 390px)')
+		? '23px'
+		: '34px'
 
 	return (
 		<Box className='brands' bgcolor={THEME_COLOR_BLACK[100]}>
 			<Box className='brands-wrapper'>
-				<List className='brands-list'>
+				<List className='brands-list' sx={{ padding: 0 }}>
 					<ListItem
 						sx={{
-							width: `${versaceWidth}px !important`,
-							height: `${versaceHeight}px !important`
+							width: versaceWidth,
+							height: versaceHeight
 						}}
 					>
 						<img
@@ -38,8 +42,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${zaraWidth}px !important`,
-							height: `${zaraHeight}px !important`
+							width: zaraWidth,
+							height: zaraHeight
 						}}
 					>
 						<img
@@ -51,8 +55,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${gucciWidth}px !important`,
-							height: `${gucciHeight}px !important`
+							width: gucciWidth,
+							height: gucciHeight
 						}}
 					>
 						<img
@@ -64,8 +68,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${pradaWidth}px !important`,
-							height: `${pradaHeight}px !important`
+							width: pradaWidth,
+							height: pradaHeight
 						}}
 					>
 						<img
@@ -77,8 +81,8 @@ const LogoBar = (): JSX.Element => {
 					</ListItem>
 					<ListItem
 						sx={{
-							width: `${calvinKleinWidth}px !important`,
-							height: `${calvinKleinHeight}px !important`
+							width: calvinKleinWidth,
+							height: calvinKleinHeight
 						}}
 					>
 						<img
