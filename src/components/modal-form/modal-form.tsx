@@ -18,27 +18,26 @@ type Props = {
 }
 
 const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
-	const [username, setUsername] = useState('')
+	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [inputType, setInputType] = useState(type)
 	const dispatch = useDispatch<AppDispatch>()
 	const [text, setText] = useState('')
-	const changeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setUsername(e.target.value)
+	const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setEmail(e.target.value)
 	}
 	const changePass = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setPassword(e.target.value)
 	}
 	const handleRegistration = () => {
 		setText('')
-		dispatch(registrationAction({ username, password }))
+		dispatch(registrationAction({ email, password }))
 		handleClose()
 	}
 	const handleLogin = () => {
 		setText('')
-		dispatch(loginAction({ username, password }))
+		dispatch(loginAction({ email, password }))
 		handleClose()
-		setTimeout(() => window.location.reload(), 1000)
 	}
 	const toggleInputType = () => {
 		switch (inputType) {
@@ -72,7 +71,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							backgroundColor='#ffffff'
 							width='325px'
 							type='input'
-							setValue={changeName}
+							setValue={changeEmail}
 						/>
 						<InputBar
 							mrLeft='0px'
@@ -116,7 +115,7 @@ const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
 							backgroundColor='#ffffff'
 							width='325px'
 							type='input'
-							setValue={changeName}
+							setValue={changeEmail}
 						/>
 						<InputBar
 							mrLeft='0px'

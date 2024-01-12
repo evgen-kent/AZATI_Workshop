@@ -10,7 +10,7 @@ type registrationState = {
 
 const initialState: registrationState = {
 	data: {
-		username: '',
+		email: '',
 		password: ''
 	},
 	status: 'idle',
