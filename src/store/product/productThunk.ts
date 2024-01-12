@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import api from '../../api/autorization'
+import api from '../../api/authorization'
 
 export const getProductAction = createAsyncThunk('getProducts', async () => {
 	try {
