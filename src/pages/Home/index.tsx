@@ -14,6 +14,12 @@ import TrendyImage from './../../assets/img/trendy-fashionable-couple-posing.jpg
 import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
+import {
+	StyledBody2,
+	StyledButtonText,
+	StyledStatisticsValueDefinitionTypography,
+	StyledStatisticsValueTypography
+} from './styled'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -35,120 +41,68 @@ const Home = (): JSX.Element => {
 						<Typography className='H1' variant='h1'>
 							FIND CLOTHES THAT MATCHES YOUR STYLE
 						</Typography>
-						<Typography
+						<StyledBody2
 							className='Body2'
 							variant='body2'
 							color={theme.palette.primary.light}
-							sx={{
-								marginTop: { xs: '20px', md: '23px' },
-								marginBottom: { xs: '24px', md: '31px' },
-								fontSize: { xs: '14px', md: '16px' },
-								fontWeight: '300',
-								letterSpacing: { xs: '-0.56px', md: '-0.64px' },
-								lineHeight: { xs: '20px', md: '22px' }
-							}}
 						>
 							Browse through our diverse range of meticulously crafted garments,
 							designed to bring out your individuality and cater to your sense
 							of style.
-						</Typography>
+						</StyledBody2>
 						<PrimaryButton width={primaryButtonWidth} height={52}>
-							<Typography
-								color={white}
-								sx={{
-									fontWeight: { xs: '500', md: '400' },
-									lineHeight: 'normal'
-								}}
-							>
-								Shop Now
-							</Typography>
+							<StyledButtonText color={white}>Shop Now</StyledButtonText>
 						</PrimaryButton>
 						<Box
 							className='statistics-wrapper'
 							color={theme.palette.primary.main}
 						>
 							<Box className='statistics-box'>
-								<Typography
+								<StyledStatisticsValueTypography
 									variant='body1'
 									color={theme.palette.primary.main}
-									sx={{
-										fontSize: { xs: '24px', md: '40px' },
-										fontWeight: '600',
-										lineHeight: 'normal',
-										letterSpacing: { xs: '-0.96px', md: '-1.6px' }
-									}}
 								>
 									200+
-								</Typography>
-								<Typography
+								</StyledStatisticsValueTypography>
+								<StyledStatisticsValueDefinitionTypography
 									variant='body2'
 									color={theme.palette.primary.light}
-									sx={{
-										fontSize: { xs: '12px', md: '16px' },
-										fontWeight: '300',
-										lineHeight: '22px',
-										letterSpacing: { xs: '-0.48px', md: '-0.64px' }
-									}}
 								>
 									International Brands
-								</Typography>
+								</StyledStatisticsValueDefinitionTypography>
 							</Box>
 							<Box bgcolor={THEME_COLOR_BLACK[10]} className='divider'></Box>
 							<Box className='statistics-box'>
-								<Typography
+								<StyledStatisticsValueTypography
 									variant='body1'
 									color={theme.palette.primary.main}
-									sx={{
-										fontSize: { xs: '24px', md: '40px' },
-										fontWeight: '600',
-										lineHeight: 'normal',
-										letterSpacing: { xs: '-0.96px', md: '-1.6px' }
-									}}
 								>
 									2,000+
-								</Typography>
-								<Typography
+								</StyledStatisticsValueTypography>
+								<StyledStatisticsValueDefinitionTypography
 									variant='body2'
 									color={theme.palette.primary.light}
-									sx={{
-										fontSize: { xs: '12px', md: '16px' },
-										fontWeight: '300',
-										lineHeight: '22px',
-										letterSpacing: { xs: '-0.48px', md: '-0.64px' }
-									}}
 								>
 									High-Quality Products
-								</Typography>
+								</StyledStatisticsValueDefinitionTypography>
 							</Box>
 							<Box
 								bgcolor={THEME_COLOR_BLACK[10]}
 								className='divider escaping-divider'
 							></Box>
 							<Box className='statistics-box'>
-								<Typography
+								<StyledStatisticsValueTypography
 									variant='body1'
 									color={theme.palette.primary.main}
-									sx={{
-										fontSize: { xs: '24px', md: '40px' },
-										fontWeight: '600',
-										lineHeight: 'normal',
-										letterSpacing: { xs: '-0.96px', md: '-1.6px' }
-									}}
 								>
 									30,000+
-								</Typography>
-								<Typography
+								</StyledStatisticsValueTypography>
+								<StyledStatisticsValueDefinitionTypography
 									variant='body2'
 									color={theme.palette.primary.light}
-									sx={{
-										fontSize: { xs: '12px', md: '16px' },
-										fontWeight: '300',
-										lineHeight: '22px',
-										letterSpacing: { xs: '-0.48px', md: '-0.64px' }
-									}}
 								>
 									Happy Customers
-								</Typography>
+								</StyledStatisticsValueDefinitionTypography>
 							</Box>
 						</Box>
 					</Box>
