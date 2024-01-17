@@ -1,4 +1,3 @@
-import { useId } from 'react'
 import style from './Footer.module.scss'
 import InputBar from '../input-bar/input-bar.tsx'
 import { TfiEmail } from 'react-icons/tfi'
@@ -10,9 +9,8 @@ import {
 	footerSocials
 } from '../../constants/footerConstants.ts'
 
-
 const Footer = (): JSX.Element => {
-	const id = useId()
+	const id = crypto.randomUUID()
 	return (
 		<div className={style.wrapper}>
 			<div className={style.form}>
