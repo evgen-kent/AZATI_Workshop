@@ -5,7 +5,7 @@ interface RatingBarProps {
 	defaultValue?: number
 	precision?: number
 }
-const RatingBar = (props: RatingBarProps): JSX.Element => {
+const RatingBar = (props: RatingBarProps) => {
 	const { name, defaultValue, precision } = props
 	return (
 		<>

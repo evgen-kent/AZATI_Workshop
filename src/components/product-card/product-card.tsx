@@ -8,7 +8,7 @@ import {
 import style from './product-card.module.scss'
 import { IProduct } from '../../types/productCardType'
 
-const ProductCard = ({ image, name }: IProduct): JSX.Element => {
+const ProductCard = ({ image, name }: IProduct) => {
 	return (
 		<Card className={style.card}>
 			<CardActionArea>

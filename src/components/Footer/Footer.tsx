@@ -11,7 +11,7 @@ import {
 } from '../../constants/footerConstants.ts'
 
 
-const Footer = (): JSX.Element => {
+const Footer = () => {
 	const id = useId()
 	return (
 		<div className={style.wrapper}>
