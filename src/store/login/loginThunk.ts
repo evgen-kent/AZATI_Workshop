@@ -2,6 +2,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 import api from '../../api/authorization'
 import { IUser } from '../../types/userType'
 
+
+
 export const loginAction = createAsyncThunk(
 	'login',
 	async ({ email, password }: IUser) => {

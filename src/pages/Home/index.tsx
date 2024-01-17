@@ -14,13 +14,20 @@ import TrendyImage from './../../assets/img/trendy-fashionable-couple-posing.jpg
 import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
+import { isAuthSlice } from '../../store/isAuth/isAuthSlice'
+import { isAuthData } from '../../store/isAuth/isAuthSelector'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
 	const products = useSelector(productsData)
+	const isAuth = useSelector(isAuthData)
 	useEffect(() => {
 		dispatch(getProductAction())
-	}, [dispatch])
+		if (localStorage.getItem('accessToken')) {
+			dispatch(isAuthSlice.actions.checkAuth(true))
+		}
+		console.log(isAuth)
+	}, [dispatch, isAuth])
 
 	const primaryButtonWidth = useMediaQuery('(max-width: 390px)') ? 358 : 210
 
@@ -124,7 +131,6 @@ const Home = (): JSX.Element => {
 				</Box>
 				<LogoBar />
 			</Box>
-
 			<div className={style.main}>
 				{/* для примера карточки сделан div с белым фоном  */}
 				<div className={style.products_row}>
