@@ -15,7 +15,7 @@ import ModalForm from '../modal-form/modal-form'
 
 const pages = ['Shop', 'On Sale', 'New Arrivals', 'Brands']
 
-const Header = (): JSX.Element => {
+const Header = () => {
 	const [open, setOpen] = useState(false)
 	const handleOpen = () => setOpen(true)
 	const handleClose = () => setOpen(false)

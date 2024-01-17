@@ -15,7 +15,7 @@ import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
 
-const Home = (): JSX.Element => {
+const Home = () => {
 	const dispatch = useDispatch<AppDispatch>()
 	const products = useSelector(productsData)
 	useEffect(() => {

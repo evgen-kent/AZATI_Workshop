@@ -7,7 +7,7 @@ import PradaImage from './../../../assets/img/prada-image.png'
 import CalvinKleinImage from './../../../assets/img/calvin-klein-image.png'
 import './styles.scss'
 
-const LogoBar = (): JSX.Element => {
+const LogoBar = () => {
 	const versaceWidth = useMediaQuery('(max-width: 390px)') ? 117 : 167
 	const versaceHeight = useMediaQuery('(max-width: 390px)') ? 24 : 34
 	const zaraWidth = useMediaQuery('(max-width: 390px)') ? 65 : 92

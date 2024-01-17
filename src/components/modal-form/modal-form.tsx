@@ -17,7 +17,7 @@ type Props = {
 	type: 'login' | 'signup' | 'form'
 }
 
-const ModalForm = ({ open, handleClose, type }: Props): JSX.Element => {
+const ModalForm = ({ open, handleClose, type }: Props) => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [inputType, setInputType] = useState(type)

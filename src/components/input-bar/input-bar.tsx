@@ -71,7 +71,7 @@ const InputBar = ({
 	mrLeft,
 	type,
 	setValue
-}: SearchProps): JSX.Element => {
+}: SearchProps) => {
 	const [inputType, setInputType] = useState(type)
 
 	const toggleInputType = () => {
