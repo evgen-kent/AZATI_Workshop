@@ -17,6 +17,7 @@ import PrimaryButton from '../../components/UI/primary-button'
 import { isAuthSlice } from '../../store/isAuth/isAuthSlice'
 import { isAuthData } from '../../store/isAuth/isAuthSelector'
 import axios from 'axios'
+import api from '../../api/authorization.ts'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -24,7 +25,7 @@ const Home = (): JSX.Element => {
 	const isAuth = useSelector(isAuthData)
 	const handleButtonClick = async () => {
 		try {
-			const response = await axios.post('http://localhost:5000/auth/protected')
+			const response = await api.post('http://localhost:5000/auth/protected')
 			console.log('Успешный ответ:', response.data)
 		} catch (error) {
 			console.error('Ошибка запроса:', error.message)
