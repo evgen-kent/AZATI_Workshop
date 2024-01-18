@@ -16,11 +16,20 @@ import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
 import { isAuthSlice } from '../../store/isAuth/isAuthSlice'
 import { isAuthData } from '../../store/isAuth/isAuthSelector'
+import axios from 'axios'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
 	const products = useSelector(productsData)
 	const isAuth = useSelector(isAuthData)
+	const handleButtonClick = async () => {
+		try {
+			const response = await axios.post('http://localhost:5000/auth/protected')
+			console.log('Успешный ответ:', response.data)
+		} catch (error) {
+			console.error('Ошибка запроса:', error.message)
+		}
+	}
 	useEffect(() => {
 		dispatch(getProductAction())
 		if (localStorage.getItem('accessToken')) {
@@ -143,6 +152,7 @@ const Home = (): JSX.Element => {
 					))}
 				</div>
 			</div>
+			<button onClick={handleButtonClick}></button>
 		</Layout>
 	)
 }

@@ -11,6 +11,7 @@ export const registrationAction = createAsyncThunk(
 				password
 			})
 			localStorage.setItem('accessToken', response.data.token.access_token)
+			localStorage.setItem('refreshToken', response.data.token.refresh_token)
 			return response.data.token.access_token
 		} catch (error) {
 			console.error('Error fetching registration:', error)

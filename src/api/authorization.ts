@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-	baseURL: `${import.meta.env.VITE_SERVICE_URL}`
+	baseURL: `http://localhost:5000/`
 })
 
 api.interceptors.request.use(
@@ -16,14 +16,35 @@ api.interceptors.request.use(
 		Promise.reject(error)
 	}
 )
-api.interceptors.response.use(
-	response => response,
-	error => {
-		if (error.response.status === 401) {
-			//здесь нужно перенаправить на 401 страницу (когда сделайте её , то сюда не забудь)
+
+api.interceptors.request.use(
+	config => {
+		return config
+	},
+	async error => {
+		const originalRequest = error.config
+		const refreshToken = localStorage.getItem('refreshToken')
+		if (
+			error.response.status == '401' &&
+			error.config &&
+			!error.config._isRetry
+		) {
+			originalRequest._isRetry = true
+			try {
+				const response = await axios.post(
+					'http://localhost:5000/auth/refresh',
+					{
+						refresh_token: refreshToken
+					}
+				)
+				localStorage.setItem('accessToken', response.data.access_token)
+				localStorage.setItem('refreshToken', response.data.refresh_token)
+				return api.request(originalRequest)
+			} catch (e) {
+				console.log(e)
+			}
 		}
-		return Promise.reject(error)
+		throw error
 	}
 )
-
 export default api
