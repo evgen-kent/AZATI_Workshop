@@ -14,10 +14,9 @@ import TrendyImage from './../../assets/img/trendy-fashionable-couple-posing.jpg
 import { StarIcon } from '../../components/UI/icons'
 import LogoBar from './LogoBar'
 import PrimaryButton from '../../components/UI/primary-button'
-import { isAuthSlice } from '../../store/isAuth/isAuthSlice'
 import { isAuthData } from '../../store/isAuth/isAuthSelector'
-import axios from 'axios'
-import api from '../../api/authorization.ts'
+import api from '../../api/authorization'
+import { isAuthAction } from '../../store/isAuth/isAuthThunk'
 
 const Home = (): JSX.Element => {
 	const dispatch = useDispatch<AppDispatch>()
@@ -25,7 +24,9 @@ const Home = (): JSX.Element => {
 	const isAuth = useSelector(isAuthData)
 	const handleButtonClick = async () => {
 		try {
-			const response = await api.post('http://localhost:5000/auth/protected')
+			const response = await api.post(
+				`${import.meta.env.VITE_SERVICE_URL}auth/protected`
+			)
 			console.log('Успешный ответ:', response.data)
 		} catch (error) {
 			console.error('Ошибка запроса:', error.message)
@@ -34,7 +35,7 @@ const Home = (): JSX.Element => {
 	useEffect(() => {
 		dispatch(getProductAction())
 		if (localStorage.getItem('accessToken')) {
-			dispatch(isAuthSlice.actions.checkAuth(true))
+			dispatch(isAuthAction())
 		}
 		console.log(isAuth)
 	}, [dispatch, isAuth])

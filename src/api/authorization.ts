@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-	baseURL: `http://localhost:5000/`
+	baseURL: `${import.meta.env.VITE_SERVICE_URL}`
 })
 
 api.interceptors.request.use(
@@ -37,7 +37,7 @@ api.interceptors.response.use((response)=>{
 		originalRequest._isRetry = true
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/auth/refresh',
+				`${import.meta.env.VITE_SERVICE_URL}auth/refresh`,
 				{
 					refresh_token: refreshToken
 				}

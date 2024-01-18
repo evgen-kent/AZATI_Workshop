@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { isAuthAction } from './isAuthThunk'
 
 type IsAuthState = {
 	isAuth: boolean
@@ -11,9 +12,12 @@ const initialState: IsAuthState = {
 export const isAuthSlice = createSlice({
 	name: 'isAuth',
 	initialState,
-	reducers: {
-		checkAuth: (state, action) => {
-			state.isAuth = action.payload
-		}
+	reducers: {},
+	extraReducers: builder => {
+		builder.addCase(isAuthAction.fulfilled, (state, action) => {
+			if (action.payload) {
+				state.isAuth = true
+			}
+		})
 	}
 })
